@@ -6,7 +6,7 @@ from .managers import UserManager
 
 class User(AbstractUser):
     phone_number = models.CharField(unique=True, max_length=20)
-    uuid = models.UUIDField(default=uuid.uuid4, editable=False)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     username = None
 
     objects = UserManager()

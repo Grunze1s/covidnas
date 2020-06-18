@@ -69,7 +69,6 @@ class UserAdmin(BaseUserAdmin):
             None,
             {
                 'fields': (
-                    'uuid',
                     'phone_number',
                     'email',
                     'password',
@@ -115,7 +114,7 @@ class UserAdmin(BaseUserAdmin):
             'fields': ('phone_number', 'password1', 'password2')}
          ),
     )
-    readonly_fields = ('date_joined','uuid')
+    readonly_fields = ('date_joined',)
     search_fields = ('phone_number', 'first_name',
                         'last_name', 'email')
     ordering = ('phone_number',)
