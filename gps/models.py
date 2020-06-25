@@ -1,7 +1,7 @@
 """Define the models to store gps data"""
 
 from django.db import models
-from covidnas.models import User
+from django.conf.settings import User
 
 class Cluster(models.Model):
     longitude = models.FloatField(max_length=50)
